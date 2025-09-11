@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div {
+            width:300px;
+            padding:20px;
+            border:2px solid #333;
+            text-align:center;
+            margin:40px auto;
+        }
+        button{
+            padding:10px 20px;
+            font-size:16px;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+        <div>
+            <img id="changeableImage" src="https://thumbs.dreamstime.com/b/incredibly-beautiful-sunset-sun-lake-sunrise-landscape-panorama-nature-sky-amazing-colorful-clouds-fantasy-design-115177001.jpg" alt="Image" style="width:100%; height:auto; border-radius:8px;">
+            <br><br>
+            <button onclick="changeImage()">Change Image</button>
+        </div>
+        <script>
+        function changeImage() {
+            var img = document.getElementById('changeableImage');
+            img.src = 'https://img.freepik.com/premium-photo/early-morning-sunrise-lake-misty-morning-rural-landscape-wilderness-mystical-feeling_416511-5997.jpg?semt=ais_hybrid&w=740&q=80';
+        }
+        </script>
+</body>
+</html>
