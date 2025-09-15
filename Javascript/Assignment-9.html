@@ -3,19 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Odd and Even Numbers</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    <script>
-        var i=1;
-        for(i=1;i<=10;i++){
-            if(i%2==0){
-                document.write(i+" is even <br>");
+    <table>
+        <tr>
+            <th>Odd Numbers</th>
+            <th>Even Numbers</th>
+        </tr>
+        <script>
+            var oddRow = "";
+            var evenRow = "";
+            for (var i = 1; i <= 10; i++) {
+                if (i % 2 == 0) {
+                    evenRow += "<tr><td></td><td>" + i + "</td></tr>";
+                } else {
+                    oddRow += "<tr><td>" + i + "</td><td></td></tr>";
+                }
             }
-            else{
-                document.write(i+" is odd <br>");
+            var maxLength = Math.max(Math.ceil(10 / 2), Math.floor(10 / 2));
+            for (var j = 0; j < maxLength; j++) {
+                var oddNum = (j < Math.ceil(10 / 2)) ? (2 * j + 1) : "";
+                var evenNum = (j < Math.floor(10 / 2)) ? (2 * j + 2) : "";
+                document.write("<tr>");
+                document.write("<td>" + oddNum + "</td>");
+                document.write("<td>" + evenNum + "</td>");
+                document.write("</tr>");
             }
-        }
-    </script>
+        </script>
+    </table>
 </body>
 </html>
