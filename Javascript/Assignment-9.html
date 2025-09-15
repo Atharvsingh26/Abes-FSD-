@@ -3,43 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odd and Even Numbers</title>
-    <style>
-        table {
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-        }
-    </style>
+    <title>[Assignment 9]</title>
 </head>
 <body>
-    <table>
-        <tr>
-            <th>Odd Numbers</th>
-            <th>Even Numbers</th>
-        </tr>
-        <script>
-            var oddRow = "";
-            var evenRow = "";
-            for (var i = 1; i <= 10; i++) {
-                if (i % 2 == 0) {
-                    evenRow += "<tr><td></td><td>" + i + "</td></tr>";
-                } else {
-                    oddRow += "<tr><td>" + i + "</td><td></td></tr>";
-                }
+    <script>
+        var a=9;
+        var b=5;
+        var even=[]
+        var odd=[]
+
+        for(var i=1;i<=10;i++){
+            document.write(a," x ",i," = ",a*i," <br>")
+            if((a*i)%2==0){
+                even.push(a*i)
+
+
             }
-            var maxLength = Math.max(Math.ceil(10 / 2), Math.floor(10 / 2));
-            for (var j = 0; j < maxLength; j++) {
-                var oddNum = (j < Math.ceil(10 / 2)) ? (2 * j + 1) : "";
-                var evenNum = (j < Math.floor(10 / 2)) ? (2 * j + 2) : "";
-                document.write("<tr>");
-                document.write("<td>" + oddNum + "</td>");
-                document.write("<td>" + evenNum + "</td>");
-                document.write("</tr>");
+            else{
+                odd.push(a*i)
+                
             }
-        </script>
-    </table>
+        }
+        document.write("  <br> ")
+        
+        for(var i=1;i<=10;i++){
+            document.write(b," x ",i," = ",b*i," <br>")
+            if((b*i)%2==0){
+                even.push(b*i)
+    
+    
+            }
+            else{
+                odd.push(b*i)
+                
+            }
+            
+        }
+        document.write("  <br> ")
+        document.write("<h3>Even Numbers:</h3>");
+        for (var i = 0; i < even.length; i++) {
+            document.write( even[i] + "<br>");
+        }
+        
+
+        document.write("<h3>Odd Numbers:</h3>");
+        for (var i = 0; i < odd.length; i++) {
+            document.write( odd[i] + "<br>");
+        }
+       
+        
+
+    </script>
+    
 </body>
 </html>
